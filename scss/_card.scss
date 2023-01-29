@@ -1,0 +1,104 @@
+@use "variables" as *;
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .card {
+        padding-top: 3rem;
+        padding-left: 3.1rem;
+        padding-right: 3rem;
+        min-height: 27.625rem;
+        max-width: 20.5rem;
+        font-family: "Lexend Deca", sans-serif;
+        font-weight: 400;
+
+        &--one {
+            background-color: $color-card-background-primary;
+            border-top-left-radius: 0.625rem;
+            border-top-right-radius: 0.625rem;
+        }
+
+        &--two {
+            background-color: $color-card-background-secondary;
+        }
+
+        &--three {
+            background-color: $color-card-background-tertiary;
+            border-bottom-left-radius: 0.625rem;
+            border-bottom-right-radius: 0.625rem;
+        }
+
+        &__h2 {
+            text-transform: uppercase;
+            font-family: $font-secondary;
+            font-size: 2.45rem;
+            color: $color-primary;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        &__p {
+            font-size: $font-size-paragraph;
+            line-height: 1.7;
+            color: $color-paragraphs;
+        }
+
+        &__button {
+            padding: 0.8125rem 1.9375rem 0.875rem;
+            display: inline-block;
+            margin-top: 1.53rem;
+            background-color: $color-primary;
+            text-decoration: none;
+            font-size: $font-size-button;
+            border-radius: 1.5rem;
+
+            &--one {
+                color: $color-card-background-primary;
+
+                @include button-hover($color-card-background-primary);
+            }
+
+            &--two {
+                color: $color-card-background-secondary;
+                @include button-hover($color-card-background-secondary);
+            }
+
+            &--three {
+                color: $color-card-background-tertiary;
+                @include button-hover($color-card-background-tertiary);
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .cards {
+        flex-direction: row;
+
+        .card {
+            min-height: 31.24rem;
+            max-width: 19.15rem;
+            padding-left: 3rem;
+
+            padding-right: 3rem;
+
+            &--one {
+                border-top-right-radius: 0;
+                border-bottom-left-radius: 0.625rem;
+            }
+
+            &--three {
+                border-top-right-radius: 0.625rem;
+                border-bottom-left-radius: 0;
+            }
+
+            &__button {
+                margin-top: 5.15rem;
+                padding-left: 2rem;
+            }
+        }
+    }
+}

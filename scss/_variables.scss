@@ -1,0 +1,30 @@
+//typography
+
+$font-size-paragraph: 0.9375rem; //15px
+$font-size-button: 0.93rem; //15px
+
+$font-primary: "Lexend Deca";
+$font-secondary: "Big Shoulders Display", cursive;
+
+//background, headings, buttons
+
+$color-primary: hsl(0, 0%, 95%);
+
+//color card bcg
+
+$color-card-background-primary: hsl(31, 77%, 52%);
+$color-card-background-secondary: hsl(184, 100%, 22%);
+$color-card-background-tertiary: hsl(179, 100%, 13%);
+
+$color-paragraphs: hsla(0, 0%, 100%, 0.75);
+
+//mixin for btn bcg color change
+
+@mixin button-hover($color) {
+    &:hover {
+        cursor: pointer;
+        background-color: $color;
+        color: $color-primary;
+        border: 2px solid $color-primary;
+    }
+}

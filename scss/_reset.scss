@@ -1,0 +1,42 @@
+@use "variables" as *;
+
+/*
+- Mobile: 375px
+- Desktop: 1440px */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    padding: 1.5rem 1.5rem;
+    min-height: 100vh;
+    background-color: $color-primary;
+}
+
+.attribution {
+    font-size: 0.7rem;
+    text-align: center;
+    margin-top: 5rem;
+    a {
+        color: $color-card-background-tertiary;
+        font-size: $font-size-paragraph;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    body {
+        padding-top: 10.7rem;
+    }
+
+    .attribution {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%);
+        min-height: 1.5rem;
+    }
+}
